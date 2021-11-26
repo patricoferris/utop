@@ -1,0 +1,11 @@
+(executables
+ (names utop)
+ (modes native)
+ (libraries utop)
+ (flags :standard -safe-string)
+ (link_flags -linkall))
+
+(install
+ (section bin)
+ (files
+  (utop.exe as utop-nat-full)))

@@ -18,6 +18,12 @@ depends: [
   "cppo" {build & >= "1.1.2"}
   "dune" {>= "1.0"}
 ]
+pin-depends: [
+  [
+    "compiler-libs-either-toplevel.dev"
+    "git+https://github.com/NathanReb/compiler-libs-either-toplevel.git"
+  ]
+]
 build: [
   ["dune" "subst"] {dev}
   ["dune" "build" "-p" name "-j" jobs]

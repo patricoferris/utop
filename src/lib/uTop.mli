@@ -350,6 +350,8 @@ val set_load_path : string list -> unit
 
 (**/**)
 
+val init : unit -> unit
+
 (* These variables are not used and deprecated: *)
 
 val prompt_continue : LTerm_text.t React.signal ref

@@ -1650,7 +1650,9 @@ let main_internal ~initial_env =
     flush stderr;
     exit !exit_status
 
-let main () = main_internal ~initial_env:None
+let main () = 
+  UTop.init ();
+  main_internal ~initial_env:None
 
 type value = V : string * _ -> value
 

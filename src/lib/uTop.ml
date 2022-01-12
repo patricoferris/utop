@@ -837,7 +837,10 @@ let () =
    | Initialization                                                  |
    +-----------------------------------------------------------------+ *)
 
-let () =
+(* If a tool wishes to use uTop and in the absence of opam init then we
+   can't eagerly do this initialisation as Findlib will throw exceptions.  *)
+
+let init () =
   (* "utop" is an internal library so it is not passed as "-package"
      to "ocamlfind ocamlmktop". *)
   Topfind.don't_load_deeply ["utop"];
